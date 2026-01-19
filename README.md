@@ -31,3 +31,20 @@ The project does not enforce a single hardware description language or design me
 ## Evolution-Oriented Design
 
 OpenHDL-Core is expected to grow and evolve over time. Architectural consistency and clean abstractions are valued more than having a complete feature set at any given moment.
+
+# Project Structure
+
+To ensure consistency and support the "Modularity First" philosophy, every module within OpenHDL-Core adheres to a standardized directory layout.
+
+This structure strictly separates portable user design assets (`user/`) from vendor-specific engineering files (`prj/`), ensuring that the core design remains reusable and tool-agnostic.
+
+![project_structure](readme_image/test.svg)
+
+> **Note on Repository Contents:**
+> To maintain a clean and lightweight codebase, only the essential source files are committed to the repository. The version control system tracks only:
+> *   **src**: RTL source code.
+> *   **sim**: User simulation code.
+> *   **docs**: Design documentation.
+> *   **data**: Constraint files (e.g., .xdc, .sdc).
+>
+> All other directories (such as `prj`, `ip`, `bd`, `.vscode`) are considered local workspace artifacts or generated files and are excluded.
