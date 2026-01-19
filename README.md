@@ -40,11 +40,52 @@ This structure strictly separates portable user design assets (`user/`) from ven
 
 ![project_structure](readme_image/test.svg)
 
-> **Note on Repository Contents:**
-> To maintain a clean and lightweight codebase, only the essential source files are committed to the repository. The version control system tracks only:
-> *   **src**: RTL source code.
-> *   **sim**: User simulation code.
-> *   **docs**: Design documentation.
-> *   **data**: Constraint files (e.g., .xdc, .sdc).
->
-> All other directories (such as `prj`, `ip`, `bd`, `.vscode`) are considered local workspace artifacts or generated files and are excluded.
+## Repository Contents
+
+To maintain a clean and lightweight codebase, only the essential source files are committed to the repository. The version control system tracks only:
+
+*   **src**: RTL source code.
+*   **sim**: User simulation code and testbenches.
+*   **data**: Constraint files (e.g., .xdc, .sdc).
+*   **docs**: Design documentation (detailed below).
+
+All other directories (such as `prj`, `ip`, `bd`, `.vscode`) are considered local workspace artifacts or generated files and are excluded.
+
+## Documentation Details
+
+The `docs` directory is the knowledge base for each module. It is divided into three categories to serve different purposes and audiences.
+
+### 1. Specification (`ModuleName_spec`)
+**Target Audience:** Users and Integrators.
+This document describes *what* the module does and how to use it. It covers:
+*   **Overview**: Functional summary and performance metrics.
+*   **Interface**: Signal lists, timing diagrams, and protocol definitions.
+*   **Micro-Architecture**:
+    *   Block Diagrams & Sub-module partitioning.
+    *   Key FSM descriptions and state diagrams.
+    *   Data flow paths.
+*   **Register Map**: Address offsets, bit widths, and access permissions (RW/RO).
+*   **Clock & Reset**: Clock domain crossing and reset strategies.
+*   **Simulation Guide**: Instructions on how to run the provided testbenches.
+
+### 2. Implementation Guide (`ModuleName_impl_guides`)
+**Target Audience:** Developers and Maintainers.
+This document describes *how* the module is implemented internally. It covers:
+*   **Design Rationale**: The thought process behind the design and algorithm derivations.
+*   **Internal Logic**: Detailed implementation specifics and coding style explanations.
+*   **FSM Details**: Logic for state transitions.
+*   **Parameter Selection**: Rationale for key parameters (e.g., why a specific FIFO depth was chosen).
+*   **Timing Optimization**: Analysis of critical paths and optimization techniques used.
+
+### 3. IP/BD Configuration
+**Target Audience:** Implementation Engineers.
+*   Contains configuration files or settings for Block Designs (BD) or Vendor IPs used in the project, ensuring the design environment can be reproduced.
+
+---
+
+> **Note on Documentation Availability:**
+> *   **Specification**: Mandatory for **ALL** modules.
+> *   **Implementation Guide**: Provided only for complex modules. Simple utility modules may skip this if the code is self-explanatory.
+> *   **IP/BD Configuration**: Provided only for modules that utilize specific Vendor IPs or Block Designs.
+
+
