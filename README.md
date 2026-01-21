@@ -1,3 +1,20 @@
+Content:
+1. [Introduction](#introduction)
+2. [Project Philosophy](#project-philosophy)
+    1. [Modularity First](#modularity-first)
+    2. [Clarity over Cleverness](#clarity-over-cleverness)
+    3. [Reusability as a Core Goal](#reusability-as-a-core-goal)
+    4. [Language and Methodology Agnostic](#language-and-methodology-agnostic)
+    5. [Evolution-Oriented Design](#evolution-oriented-design)
+3. [Project Structure](#project-structure)
+    1. [Repository Contents](#repository-contents)
+    2. [Documentation Details](#documentation-details)
+        1. [Specification (`ModuleName_spec`)](#1-specification-modulename_spec)
+        2. [Implementation Guide (`ModuleName_impl_guides`)](#2-implementation-guide-modulename_impl_guides)
+        3. [IP/BD Configuration](#3-ipbd-configuration)
+        4. [Note on Documentation Avaialability](#note-on-documentation-availability)
+
+
 # Introduction
 
 OpenHDL-Core is an open, modular, and extensible hardware design core library.
