@@ -332,7 +332,8 @@ This document describes *how* the module is implemented internally. It covers:
 *   Contains configuration files or settings for Block Designs (BD) or Vendor IPs used in the project, ensuring the design environment can be reproduced.
 
 
-> **Note on Documentation Availability:**
+### Note on Documentation Availability
+
 > *   **Specification**: Mandatory for **ALL** modules.
 > *   **Implementation Guide**: Provided only for complex modules. Simple utility modules may skip this if the code is self-explanatory.
 > *   **IP/BD Configuration**: Provided only for modules that utilize specific Vendor IPs or Block Designs.
